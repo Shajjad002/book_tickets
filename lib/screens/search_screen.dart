@@ -1,4 +1,5 @@
 import 'package:book_tickets/utils/app_styles.dart';
+import 'package:book_tickets/widgets/icon_text_widget.dart';
 //import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -54,20 +55,26 @@ class SearchScreen extends StatelessWidget {
               ),
             ),
           ),
-          const Gap(20),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: const Color(0xFFF4F6FD),
-            ),
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-            child: Row(
-              children: [
-                const Icon(Icons.flight_takeoff_rounded, color: Color(0xFFBFC205)),
-                Text("Departure",style: Styles.headLineStyle4 ,)
-              ],
-            ),
+          const Gap(25),
+          AppIconText(iconData: Icons.flight_takeoff_rounded, text: "Departure"),
+          Gap(15),
+          AppIconText(iconData: Icons.flight_land_rounded, text: "Arrival"),
+          Gap(25),
+      Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: Color(0xD91130CE),
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+        child: Center(
+          child: Text(
+            "Find Tickets",
+            style: Styles.textStyle.copyWith(color: Colors.white, fontSize: 20),
           ),
+        )
+
+        ),
+
        ],
       ),
     );
