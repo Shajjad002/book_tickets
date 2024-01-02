@@ -1,6 +1,6 @@
 import 'package:book_tickets/utils/app_styles.dart';
+import 'package:book_tickets/widgets/double_text_widget.dart';
 import 'package:book_tickets/widgets/icon_text_widget.dart';
-//import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -74,6 +74,36 @@ class SearchScreen extends StatelessWidget {
         )
 
         ),
+          const Gap(35),
+          const AppDoubleTextWidget(bigText: "Upcoming Flights", smallText: "View all"),
+      Row(
+        children: [
+          Container(
+            height:400 ,
+            width: size.width*0.42,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              color: Colors.white,
+            ),
+            child: Column(
+              children: [
+                Container(
+                    height:190,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage(
+                              "assets/images/sit.jpg"
+                          )
+                      )
+                  )
+                )
+              ],
+            ),
+          )
+        ],
+      )
 
        ],
       ),

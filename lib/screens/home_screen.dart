@@ -1,6 +1,7 @@
 import 'package:book_tickets/screens/ticket_view.dart';
 import 'package:book_tickets/utils/app_info_list.dart';
 import 'package:book_tickets/utils/app_styles.dart';
+import 'package:book_tickets/widgets/double_text_widget.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -69,19 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   const Gap(35),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween ,
-                    children: [
-                      Text("Upcoming Flights", style: Styles.headLineStyle2,),
-                      InkWell(
-                          onTap: (){
-                            print("You are tapped");
-                          },
-                          child: Text("View all", style: Styles.textStyle.copyWith(color: Styles.primaryColor),
-                          )
-                      ),
-                    ],
-                  )
+                  const AppDoubleTextWidget(bigText: "Upcoming Flights", smallText: "View all")
               ],
             ),
           ),
@@ -96,20 +85,9 @@ class _HomeScreenState extends State<HomeScreen> {
           const Gap(15),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween ,
-              children: [
-                Text("Hotels", style: Styles.headLineStyle2,),
-                InkWell(
-                    onTap: (){
-                      print("You are tapped");
-                    },
-                    child: Text("View all", style: Styles.textStyle.copyWith(color: Styles.primaryColor),
-                    )
-                ),
-              ],
+            child: const AppDoubleTextWidget(bigText: "Hotels",smallText: "View all",)
+
             ),
-          ),
           const Gap(20),
           SingleChildScrollView(
               scrollDirection: Axis.horizontal,
