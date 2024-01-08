@@ -1,6 +1,7 @@
 import 'package:book_tickets/utils/app_styles.dart';
 import 'package:book_tickets/widgets/double_text_widget.dart';
 import 'package:book_tickets/widgets/icon_text_widget.dart';
+import 'package:book_tickets/widgets/ticket_tabs.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -22,39 +23,7 @@ class SearchScreen extends StatelessWidget {
             "What are \nyou looking for?",
             style:Styles.headLineStyle.copyWith(fontSize: 35),),
             const Gap(20),
-          FittedBox(
-           child: Container(
-              padding: const EdgeInsets.all(3.5),
-              child: Row(
-                children: [
-                  //Airline Tickets
-                  Container(
-                    width: size.width*.49,
-                    padding: EdgeInsets.symmetric(vertical: 7),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.horizontal(left: Radius.circular(50) ),
-                        color: Colors.white
-                    ),
-                    child: Center(child: Text("AirLine Tickets"),),
-                  ),
-                  //Hotels
-                  Container(
-                    width: size.width*.49,
-                    padding: EdgeInsets.symmetric(vertical: 7),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.horizontal(right: Radius.circular(50) ),
-                      color: Colors.transparent
-                    ),
-                    child: Center(child: Text("Hotels"),),
-                  ),
-                ],
-              ),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: const Color(0xFFF4F6FD)
-              ),
-            ),
-          ),
+            AppTicketTabs(firstTab: "AirLine Tickets",secondTab: "Hotels",),
           const Gap(25),
           AppIconText(iconData: Icons.flight_takeoff_rounded, text: "Departure"),
           Gap(15),
