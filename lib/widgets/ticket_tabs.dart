@@ -1,7 +1,6 @@
 import 'package:book_tickets/utils/app_layout.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class AppTicketTabs extends StatelessWidget {
   final String firstTab;
