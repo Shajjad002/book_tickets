@@ -33,7 +33,7 @@ class TicketView extends StatelessWidget{
                 children: [
                   Row(
                     children: [
-                      Text(ticket['from']['code'], style: isColor==null? Styles.headLineStyle3.copyWith(color: Colors.white):Styles.headLineStyle3),
+                      Text(ticket['from']['code'], style: isColor==null? Styles.headLineStyle3.copyWith(color: Colors.white):Styles.headLineStyle3.copyWith(color: Colors.black)),
                       Expanded(child: Container()),
                       ThickContainer(isColor:true),
                       Expanded(child: Stack(
@@ -64,7 +64,7 @@ class TicketView extends StatelessWidget{
 
                       ThickContainer(isColor:true),
                       Expanded(child: Container()),
-                      Text(ticket['to']['code'], style: isColor==null? Styles.headLineStyle3.copyWith(color: Colors.white):Styles.headLineStyle3),
+                      Text(ticket['to']['code'], style: isColor==null? Styles.headLineStyle3.copyWith(color: Colors.white):Styles.headLineStyle3.copyWith(color: Colors.black)),
                     ],
                   ),
                   const Gap(3),
@@ -72,11 +72,11 @@ class TicketView extends StatelessWidget{
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       SizedBox(
-                        width: 100,child: Text(ticket['from']['name'],style: isColor==null? Styles.headLineStyle4.copyWith(color: Colors.white):Styles.headLineStyle4),
+                        width: 100,child: Text(ticket['from']['name'],style: isColor==null? Styles.headLineStyle4.copyWith(color: Colors.white):Styles.headLineStyle4.copyWith(color: Colors.black)),
                       ),
-                      Text(ticket['flying_time'], style:isColor==null? Styles.headLineStyle4.copyWith(color: Colors.white):Styles.headLineStyle4),
+                      Text(ticket['flying_time'], style:isColor==null? Styles.headLineStyle4.copyWith(color: Colors.white):Styles.headLineStyle4.copyWith(color: Colors.black)),
                       SizedBox(
-                        width: 100,child: Text(ticket['to']['name'],textAlign:TextAlign.end, style: isColor==null? Styles.headLineStyle4.copyWith(color: Colors.white):Styles.headLineStyle4),
+                        width: 100,child: Text(ticket['to']['name'],textAlign:TextAlign.end, style: isColor==null? Styles.headLineStyle4.copyWith(color: Colors.white):Styles.headLineStyle4.copyWith(color: Colors.black)),
                       ),
                     ],
                   )
@@ -142,25 +142,25 @@ class TicketView extends StatelessWidget{
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(ticket['date'], style: Styles.headLineStyle3.copyWith(color: Colors.white)),
+                          Text(ticket['date'], style:isColor==null? Styles.headLineStyle3.copyWith(color: Colors.white):Styles.headLineStyle3.copyWith(color: Colors.black)),
                           const Gap(5),
-                          Text("DATE", style: Styles.headLineStyle4.copyWith(color: Colors.white)),
+                          Text("DATE", style: isColor==null? Styles.headLineStyle4.copyWith(color: Colors.white):Styles.headLineStyle4.copyWith(color: Colors.black)),
                         ],
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text(ticket['departure_time'], style: Styles.headLineStyle3.copyWith(color: Colors.white)),
+                          Text(ticket['departure_time'], style: isColor==null? Styles.headLineStyle3.copyWith(color: Colors.white):Styles.headLineStyle3.copyWith(color: Colors.black)),
                           const Gap(5),
-                          Text("Departure time", style: Styles.headLineStyle4.copyWith(color: Colors.white)),
+                          Text("Departure time", style: isColor==null? Styles.headLineStyle4.copyWith(color: Colors.white):Styles.headLineStyle4.copyWith(color: Colors.black)),
                         ],
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          Text(ticket['number'].toString(), style: Styles.headLineStyle3.copyWith(color: Colors.white)),
+                          Text(ticket['number'].toString(), style: isColor==null? Styles.headLineStyle3.copyWith(color: Colors.white):Styles.headLineStyle3.copyWith(color: Colors.black)),
                           const Gap(5),
-                          Text("Number", style: Styles.headLineStyle4.copyWith(color: Colors.white)),
+                          Text("Number", style: isColor==null? Styles.headLineStyle4.copyWith(color: Colors.white):Styles.headLineStyle4.copyWith(color: Colors.black)),
                         ],
                       )
                     ],
