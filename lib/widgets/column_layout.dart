@@ -8,20 +8,24 @@ class AppColumnLayout extends StatelessWidget {
   final CrossAxisAlignment alignment;
   final String firstText ;
   final String secondText ;
+  final bool? isColor;
   const AppColumnLayout({Key? key,
     required this.firstText,
     required this.secondText,
-    required this.alignment
+    required this.alignment,
+    this.isColor,
   }) :super(key:key);
 
   @override
   Widget build(BuildContext context) {
     return      Column(
       crossAxisAlignment: alignment,
+      //style:isColor==null? Styles.headLineStyle3.copyWith(color: Colors.white):Styles.headLineStyle3.copyWith(color: Colors.black)
+      //style: isColor==null? Styles.headLineStyle4.copyWith(color: Colors.white):Styles.headLineStyle4.copyWith(color: Colors.black)
       children: [
-        Text(firstText,style: Styles.headLineStyle3.copyWith(color: Colors.black),),//"Flutter DB"
+        Text(firstText,style:isColor==null? Styles.headLineStyle3.copyWith(color: Colors.white):Styles.headLineStyle3.copyWith(color: Colors.black)),//"Flutter DB"
         Gap(5),
-        Text(secondText,style: Styles.headLineStyle4),//"Passenger"
+        Text(secondText,style: isColor==null? Styles.headLineStyle4.copyWith(color: Colors.white):Styles.headLineStyle4),//"Passenger"
       ],
     );
   }
