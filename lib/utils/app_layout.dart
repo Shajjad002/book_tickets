@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:flutter/material.dart' ;
 
 class AppLayout{
   static getSize(BuildContext context){

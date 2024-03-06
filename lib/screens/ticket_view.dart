@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 
 import '../utils/app_layout.dart';
 import '../utils/app_styles.dart';
@@ -16,7 +17,7 @@ class TicketView extends StatelessWidget{
     final size = AppLayout.getSize(context);
     return SizedBox(
       width: size.width*0.85,
-      height: 200,
+      height:190,
       child: Container(
         margin: const EdgeInsets.only(right: 16),
         child: Column(
@@ -131,7 +132,7 @@ class TicketView extends StatelessWidget{
             Container(
               decoration: BoxDecoration(
                   color: isColor==null? Color(0xFFF37B67):Colors.white,
-                  borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20))
+                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(isColor==null?20:0),bottomRight: Radius.circular(isColor==null?20:0))
               ),
               padding: const EdgeInsets.only(left: 16,top: 10,right: 16,bottom: 16),
               child: Column(
