@@ -3,6 +3,7 @@ import 'package:book_tickets/utils/app_info_list.dart';
 import 'package:book_tickets/utils/app_layout.dart';
 import 'package:book_tickets/utils/app_styles.dart';
 import 'package:book_tickets/widgets/column_layout.dart';
+import 'package:book_tickets/widgets/layout_builder_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -31,6 +32,7 @@ class TicketScreen extends StatelessWidget {
                 padding: EdgeInsets.only(left: 15),
                 child: TicketView(ticket: ticketList[0],isColor: true,),
               ),
+              SizedBox(height: 1,),
               Container(
                 //width: size.width*0.80,
                 padding: EdgeInsets.symmetric(horizontal: 15),
@@ -45,12 +47,47 @@ class TicketScreen extends StatelessWidget {
                            firstText: 'Flutter DB',
                            secondText: 'Passenger',
                            alignment: CrossAxisAlignment.start,
+                           isColor: false,
                          ),
                           AppColumnLayout(
                            firstText: '5221 478566',
                            secondText: 'Passport',
                             alignment: CrossAxisAlignment.end,
+                            isColor: false,
                          )
+                        ],
+                      ),
+                      Gap(20),
+                      const AppLayoutBuilderWidget(sections: 15,isColor: false,width:5,),
+                      Gap(20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          AppColumnLayout(
+                            firstText: '364738 28274478',
+                            secondText: 'Number of E-Ticket',
+                            alignment: CrossAxisAlignment.start,
+                            isColor: false,
+                          ),
+                          AppColumnLayout(
+                            firstText: 'B2SG28',
+                            secondText: 'Booking code',
+                            alignment: CrossAxisAlignment.end,
+                            isColor: false,
+                          )
+                        ],
+                      ),
+                      Gap(20),
+                      const AppLayoutBuilderWidget(sections: 15,isColor: false,width:5,),
+                      Row(
+                        children:[
+                          Column(
+                            children:[
+                              Row(
+
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ],
